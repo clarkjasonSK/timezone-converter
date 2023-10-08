@@ -1,4 +1,6 @@
 
+var inputDate = document.getElementById("_input_date")
+var inputTime = document.getElementById("_input_time")
 
 /*
 var inputYear = document.getElementById("_input_year")
@@ -23,7 +25,7 @@ var br = document.getElementById("_out_br")
 //alert ("hello! " + tempDate.value + ' <div class="center"></div> ')
 
 
-setDateToday()
+//setDateToday(inputDate, inputTime)
 //setInputPlaceholders(inputYear, inputMonth, inputDay, inputHour, inputMinute);
 
 
@@ -34,10 +36,37 @@ nowTime.value = new Date();*/
 
 
 function generateTimes(){
-	alert("button clicked!")
+	var newDate = new Date(inputDate.value)
+	let[hours, mins] = inputTime.value.split(":")
+	newDate.setHours(hours, mins)
+	usEst.value = '' + (newDate.getMonth()+1) 
+				+ ' ' + newDate.getDate() 
+				+ ' '+ newDate.getFullYear() 
+				+ ' ' + newDate.getHours() 
+				+ ':' + prependZero(newDate.getMinutes())
+	usPdt.value = usEst.value
+
+	alert(newDate - 1)
+	
+	//alert("test here " + hours + " and here " + mins)
 }
 
-function setDateToday(year, month, day, hour, minute){
+
+function clearFields(){
+	//alert("clear!")
+	
+	const fields = document.getElementsByClassName("field");
+	
+	//alert(outputFields.)
+
+	for( var i = 0 ; i < fields.length; i++){
+		fields[i].value = ''
+		//alert(fields[i].value)
+	}
+
+}
+
+function setDateToday(date, time){
 	var today = new Date();
 	/*
 	year.placeholder = "Year (" + today.getFullYear() + ")"
