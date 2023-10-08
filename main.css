@@ -50,16 +50,24 @@ header{
     justify-content: space-evenly;
 }
 
-.input{
-    font-size: 1vw;
-    width: 6.5vw;
-    padding: 1vh;
-}
-
 #_input_label{
     font-size: 2vw;
     text-align: center;
 }
+
+#_input_date{
+    width: 9.5vw;
+}
+#_input_time{
+    width: 6.5vw;
+}
+
+.input{
+    font-size: 1vw;
+    padding: 1vh;
+}
+
+
 
 
 #_output{
