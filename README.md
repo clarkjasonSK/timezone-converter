@@ -1,2 +1,2 @@
-# timezone-convert
+# timezone-converter
  
