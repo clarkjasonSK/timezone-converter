@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<title>Timezone Conversion</title>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+
+	</head>
+
+	<body>
+		
+
+		<header>
+				Automatic Timezone Converter
+		</header>
+
+		<div class="horizontalSection">
+			<div id="input_container">
+				<div id="_input_label" class="input_line">
+					Enter Date & Time
+
+				</div>
+				<div class="input_line">
+					<input id="_input_date" class="input" type="date" />
+					<input id="_input_time" class="input" type="time" />
+				</div>
+			<!--
+				<div id="_input_date" class="input_line">
+					<input id="_input_year" class="input"/>
+					<input id="_input_month" class="input"/>
+					<input id="_input_day" class="input"/>
+				</div>
+
+				<div id ="_input_time" class="input_line">
+					<input id="_input_hour" class="input"/>
+					<input id="_input_minute" class="input"/>
+				</div>
+
+				<div id ="_input_buttons" class="input_line">
+					<button onclick="generateTimes()">Generate</button>
+					<button onclick="clear()">Clear</button> 
+				</div>
+			-->
+			</div>
+
+		</div>
+
+		<div class="horizontalSection">
+			<div id="_left_half">
+				<table>
+				  <tr>
+				    <th>Region</th>
+				    <th>Local Release Time</th>
+				  </tr>
+
+				  <tr>
+				    <td>United States (EST)</td>
+				    <td>
+				    <input id="_out_us_est" class="output_input" readonly/>
+				  </tr>
+
+				  <tr>
+				    <td>United States (PDT)</td>
+				    <td>
+				    <input id="_out_us_pdt" class="output_input" readonly/>
+				  </tr>
+
+				  <tr>
+				    <td>United Kingdom</td>
+				    <td>
+				    	<input id="_out_uk" class="output_input" readonly/>
+					</td>
+
+				  </tr>
+
+				  <tr>
+				    <td>New Zealand</td>
+				    <td>
+				    	<input id="_out_nz" class="output_input" readonly/>
+					</td>
+				  </tr>
+
+				  <tr>
+				    <td>Australian East Coast</td>
+				    <td>
+				    	<input id="_out_aus_east" class="output_input" readonly/>
+					</td>
+				  </tr>
+
+				  <tr>
+				    <td>Australian West Coast</td>
+				    <td>
+				    	<input id="_out_aus_west" class="output_input" readonly/>
+					</td>
+				  </tr>
+
+				  <tr>
+				    <td>Japan</td>
+				    <td>
+				    	<input id="_out_jp" class="output_input" readonly/>
+					</td>
+				  </tr>
+
+				  <tr>
+				    <td>Philippines</td>
+				    <td>
+				    	<input id="_out_ph" class="output_input" readonly/>
+					</td>
+				  </tr>
+
+				  <tr>
+				    <td>South Africa</td>
+				    <td>
+				    	<input id="_out_sa" class="output_input" readonly>
+					</td>
+				  </tr>
+
+				  <tr>
+				    <td>Brazil</td>
+				    <td>
+				    	<input id="_out_br" class="output_input" readonly>
+					</td>
+				  </tr>
+
+				</table>		
+			</div>
+
+			<div id="_right_half">
+				<textarea id="_output">
+					ello bruvsdas
+				</textarea>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="converter.js"></script>
+</html>
