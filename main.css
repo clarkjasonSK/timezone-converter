@@ -50,8 +50,8 @@ header{
     justify-content: space-evenly;
 }
 
-#_input_label{
-    font-size: 2vw;
+.label{
+    font-size: 1.75vw;
     text-align: center;
 }
 

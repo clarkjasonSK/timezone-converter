@@ -14,26 +14,40 @@
 
 		<div class="horizontalSection">
 			<div id="input_container">
-				<div id="_input_label" class="input_line">
-					Enter Date & Time
-
-				</div>
 				<div class="input_line">
-					<input id="_input_date" class="input field" type="date" />
-					<input id="_input_time" class="input field" type="time" />
-				</div>
-			<!--
-				<div id="_input_date" class="input_line">
-					<input id="_input_year" class="input"/>
-					<input id="_input_month" class="input"/>
-					<input id="_input_day" class="input"/>
+					<div id=_col_region class="input_col_">
+						<div class="label">
+							Region
+						</div>
+
+						<select id="_input_region" class="input field">
+							<option value="3">United States (EST)</option>
+							<option value="0">United States (PDT)</option>
+							<option value="8">United Kingdom</option>
+							<option value="20">New Zealand</option>
+							<option value="18">Australian East Coast</option>
+							<option value="15">Australian West Coast</option>
+							<option value="16">Japan</option>
+							<option value="15">Philippines</option>
+							<option value="9">South Africa</option>
+							<option value="4">Brazil</option>
+							
+						</select>
+
+					</div>
+
+					<div id="_col_date" class="input_col">
+						<div class="label"> Date </div>
+						<input id="_input_date" class="input field" type="date" />
+					</div>
+
+					
+					<div id="_col_time" class="input_col">
+						<div class="label"> Time </div>
+						<input id="_input_time" class="input field" type="time" />
+					</div>
 				</div>
 
-				<div id ="_input_time" class="input_line">
-					<input id="_input_hour" class="input"/>
-					<input id="_input_minute" class="input"/>
-				</div>
--->
 				<div id ="_input_buttons" class="input_line">
 					<button onclick="generateTimes()">Generate</button>
 					<button onclick="clearFields()">Clear</button> 
@@ -141,5 +155,6 @@
 
 		</div>
 	</body>
+	<script type="text/javascript" src="clear.js"></script>
 	<script type="text/javascript" src="converter.js"></script>
 </html>
