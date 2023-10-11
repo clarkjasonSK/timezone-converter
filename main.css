@@ -11,14 +11,14 @@
 *{
     padding: 0;
     margin: 0;
-
+    font-family: sans-serif;
     text-align: center;
 }
 
  html, body{
     width: 100vw; height: 100vh;
     scroll-behavior: smooth;
-    background-color: #EEEEEE;
+    background-color: #E1E1E1;
 }
 body{
     display: flex;
@@ -26,17 +26,25 @@ body{
 }
 header{
     width: 100vw;
-    font-size: 3vw;
+    font-size: 2.75vw;
     padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 1vh;
 }
 
 .horizontalSection{
-    width: 100vw;
+    width: 70vw;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding-bottom: 7vh;
+    margin: 2.5vh 12.5vw 2.5vh 12.5vw;
+
+    padding: 2.5vh;
+    background-color: #EEEEEE;
+
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #FF8024;
+
 }
 
 #input_container{
@@ -57,16 +65,25 @@ header{
 }
 
 .label{
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     padding-bottom: 1vh;
 }
 .output_label{
-    font-size: 1.25vw;
+    font-size: 1.1vw;
 }
 
 .input {
     font-size: 1vw;
     padding: 1vh;
+}
+
+option{
+    background-color: #FFFFFF;
+}
+
+select:hover{
+    background-color: #FFFFFF;
+    border-style: solid;
 }
 
 .output{
@@ -78,17 +95,28 @@ header{
 }
 
 button{
-    width: 10vw;
-    font-size:  1.5vw;
+    width: 15vw;
+    font-size:  1.25vw;
+    font-weight: 600;
     margin-top: 1.5vh;
     margin-right: 2vw;
 
+    background-color: #3381E8;
+    color: #ffffff;
+    border-radius: 32px;
+    border-style: none;
+
+    padding: 8px 24px;
 }
 
+button:hover{
+    background-color: #71A7EF;
+    cursor: pointer;
+}
 
 #_out_textarea{
     width: 30vw;
-    height: 50vh;
+    height: 45vh;
     resize: none;
     text-align: left
 }
