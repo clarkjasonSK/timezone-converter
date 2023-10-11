@@ -1,10 +1,11 @@
 # Automatic Timezone Converter
 
 ## Input 
-..* region
-..* date
-..* time
+- region
+- date
+- time
+
 
 ## output 
-..* times for several timezones
-..* whole code block for copy-pasting
+- times for several timezones
+- whole code block for copy-pasting
