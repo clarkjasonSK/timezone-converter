@@ -1,6 +1,5 @@
 clearAll()
 
-
 function clearAll(){
 	//alert("clear!")
 

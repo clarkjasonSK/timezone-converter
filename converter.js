@@ -7,10 +7,6 @@ var inputTime = document.getElementById("_input_time")
 var targetDate, latestDate
 
 
-
-//const timezones = new [3, 0, 8, 20, 18, 15, 16, 15, 9, 4]
-
-
 const hourInMs = 3600000
 
 const timezones = new Map()
@@ -25,15 +21,6 @@ timezones.set("_out_ph", 15)
 timezones.set("_out_sa", 9)
 timezones.set("_out_br", 4)
 
-
-//setDateToday(inputDate, inputTime)
-
-//alert(inputDate.getMonth() + " and " + inputTime.value)
-/*
-var nowTime = document.getElementById("_input_time")
-nowTime.value = new Date();*/
-
-
 function generateTimes(){
 
 	setTargetDate()
@@ -47,10 +34,6 @@ function setTargetDate(){
 	let[hours, mins] = inputTime.value.split(":")
 	targetDate.setHours(hours, mins)
 
-	//alert("timestamp: " + targetDate.getTime())
-	//alert(" region: " + inputRegion.value + " datetime: " + targetDate)
-	//alert("target time: " + targetDate.getTime() + " offset: " + (inputRegion.value*3600000))
-	
 	latestDate = new Date(targetDate.getTime() - (inputRegion.value*hourInMs))
 	//alert("latest date: " + latestDate)
 }
@@ -147,25 +130,6 @@ function setOutputTextArea(){
 +'\n    <td class="center">'+ document.getElementById("_out_br").value +'</td>'
 +'\n  </tr>'
 +'\n </table>'
-}
-
-function setDateToday(date, time){
-	let today = new Date();
-	/*
-	year.placeholder = "Year (" + today.getFullYear() + ")"
-	month.placeholder = "Month (" + (today.getMonth()+1) + ")"
-	day.placeholder = "Day (" + today.getDate() + ")"
-
-	hour.placeholder = "Hour (" + today.getHours() + ")"
-	minute.placeholder = "Minute (" + today.getMinutes() + ")"*/
-	
-	 
-	date.value = today.getFullYear() 
-				+'-'+prependZero((today.getMonth()+1))
-				+'-'+prependZero(today.getDate())
-
-	time.value = today.getHours() 
-				+':'+prependZero(today.getMinutes())
 }
 
 function prependZero(number){
