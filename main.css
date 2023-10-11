@@ -11,6 +11,8 @@
 *{
     padding: 0;
     margin: 0;
+
+    text-align: center;
 }
 
  html, body{
@@ -27,13 +29,12 @@ header{
     font-size: 3vw;
     padding-top: 5vh;
     padding-bottom: 5vh;
-    text-align: center;
 }
 
 .horizontalSection{
     width: 100vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
     padding-bottom: 7vh;
 }
@@ -47,31 +48,47 @@ header{
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+._col_container{
+    margin-right: 2vw;
+
 }
 
 .label{
     font-size: 1.75vw;
-    text-align: center;
+    padding-bottom: 1vh;
+}
+.output_label{
+    font-size: 1.25vw;
 }
 
-#_input_date{
-    width: 9.5vw;
-}
-#_input_time{
-    width: 6.5vw;
-}
-
-.input{
+.input {
     font-size: 1vw;
     padding: 1vh;
 }
 
+.output{
+    font-size: 1vw;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+button{
+    width: 10vw;
+    font-size:  1.5vw;
+    margin-top: 1.5vh;
+    margin-right: 2vw;
+
+}
 
 
-
-#_output{
+#_out_textarea{
     width: 30vw;
-    min-height: 30vh;
+    height: 50vh;
     resize: none;
+    text-align: left
 }

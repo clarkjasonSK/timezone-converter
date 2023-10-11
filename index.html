@@ -15,13 +15,13 @@
 		<div class="horizontalSection">
 			<div id="input_container">
 				<div class="input_line">
-					<div id=_col_region class="input_col_">
+					<div id=_col_region class="_col_container">
 						<div class="label">
 							Region
 						</div>
 
-						<select id="_input_region" class="input field">
-							<option value="3">United States (EST)</option>
+						<select id="_input_region" class="input clearable">
+							<option value="3">United States (EDT)</option>
 							<option value="0">United States (PDT)</option>
 							<option value="8">United Kingdom</option>
 							<option value="20">New Zealand</option>
@@ -36,21 +36,21 @@
 
 					</div>
 
-					<div id="_col_date" class="input_col">
+					<div id="_col_date" class="_col_container">
 						<div class="label"> Date </div>
-						<input id="_input_date" class="input field" type="date" />
+						<input id="_input_date" class="input clearable" type="date" />
 					</div>
 
 					
-					<div id="_col_time" class="input_col">
+					<div id="_col_time" class="_col_container">
 						<div class="label"> Time </div>
-						<input id="_input_time" class="input field" type="time" />
+						<input id="_input_time" class="input clearable" type="time" />
 					</div>
 				</div>
 
-				<div id ="_input_buttons" class="input_line">
+				<div class="input_line">
 					<button onclick="generateTimes()">Generate</button>
-					<button onclick="clearFields()">Clear</button> 
+					<button onclick="clearAll()">Clear</button> 
 				</div>
 			
 			</div>
@@ -58,88 +58,88 @@
 		</div>
 
 		<div class="horizontalSection">
-			<div id="_left_half">
+			<div class="_col_container">
 				<table>
 				  <tr>
-				    <th>Region</th>
-				    <th>Local Release Time</th>
+				    <td class="label">Region</td>
+				    <td class="label">Local Release Time</td>
 				  </tr>
 
 				  <tr>
-				    <td>United States (EST)</td>
+				    <td class="output_label">United States (EDT)</td>
 				    <td>
-				    <input id="_out_us_est" class="output field
+				    <input id="_out_us_edt" class="output clearable
 				    " readonly/>
 				  </tr>
 
 				  <tr>
-				    <td>United States (PDT)</td>
+				    <td class="output_label">United States (PDT)</td>
 				    <td>
-				    <input id="_out_us_pdt" class="output field
+				    <input id="_out_us_pdt" class="output clearable
 				    " readonly/>
 				  </tr>
 
 				  <tr>
-				    <td>United Kingdom</td>
+				    <td class="output_label">United Kingdom</td>
 				    <td>
-				    	<input id="_out_uk" class="output field
+				    	<input id="_out_uk" class="output clearable
 				    	" readonly/>
 					</td>
 
 				  </tr>
 
 				  <tr>
-				    <td>New Zealand</td>
+				    <td class="output_label">New Zealand</td>
 				    <td>
-				    	<input id="_out_nz" class="output field
+				    	<input id="_out_nz" class="output clearable
 				    	" readonly/>
 					</td>
 				  </tr>
 
 				  <tr>
-				    <td>Australian East Coast</td>
+				    <td class="output_label">Australian East Coast</td>
 				    <td>
-				    	<input id="_out_aus_east" class="output field
+				    	<input id="_out_aus_east" class="output clearable
 				    	" readonly/>
 					</td>
 				  </tr>
 
 				  <tr>
-				    <td>Australian West Coast</td>
+				    <td class="output_label">Australian West Coast</td>
 				    <td>
-				    	<input id="_out_aus_west" class="output field
+				    	<input id="_out_aus_west" class="output clearable
 				    	" readonly/>
 					</td>
 				  </tr>
 
 				  <tr>
-				    <td>Japan</td>
+				    <td class="output_label">Japan</td>
 				    <td>
-				    	<input id="_out_jp" class="output field
+				    	<input id="_out_jp" class="output clearable
 				    	" readonly/>
 					</td>
 				  </tr>
 
 				  <tr>
-				    <td>Philippines</td>
+				    <td class="output_label">Philippines</td>
 				    <td>
-				    	<input id="_out_ph" class="output field
+				    	<input id="_out_ph" class="output clearable
 				    	" readonly/>
 					</td>
 				  </tr>
 
 				  <tr>
-				    <td>South Africa</td>
+				    <td class="output_label"> South Africa</td>
 				    <td>
-				    	<input id="_out_sa" class="output field
+				    	<input id="_out_sa" class="output clearable
 				    	" readonly>
 					</td>
 				  </tr>
 
 				  <tr>
-				    <td>Brazil</td>
+				    <td class="output_label">Brazil</td>
 				    <td>
-				    	<input id="_out_br" class="output field
+				    	<input id="_out_br" class="output clearable
 				    	" readonly>
 					</td>
 				  </tr>
@@ -147,9 +147,9 @@
 				</table>		
 			</div>
 
-			<div id="_right_half">
-				<textarea id="_output">
-					ello bruvsdas
+			<div class="_col_container">
+				<textarea id="_out_textarea" class="output clearable" readonly>
+					test
 				</textarea>
 			</div>
 

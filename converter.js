@@ -6,19 +6,7 @@ var inputTime = document.getElementById("_input_time")
 
 var targetDate, latestDate
 
-/*
-//individual output fields 
-var _output_usEst = document.getElementById("_out_us_est")
-var _output_usPdt = document.getElementById("_out_us_pdt")
-var _output_uk = document.getElementById("_out_uk")
-var _output_nz = document.getElementById("_out_nz")
-var _output_ausEast = document.getElementById("_out_aus_east")
-var _output_ausWest = document.getElementById("_out_aus_west")
-var _output_jp = document.getElementById("_out_jp")
-var _output_ph = document.getElementById("_out_ph")
-var _output_sa = document.getElementById("_out_sa")
-var _output_br = document.getElementById("_out_br")
-*/
+
 
 //const timezones = new [3, 0, 8, 20, 18, 15, 16, 15, 9, 4]
 
@@ -26,11 +14,11 @@ var _output_br = document.getElementById("_out_br")
 const hourInMs = 3600000
 
 const timezones = new Map()
-timezones.set("_out_us_est", 3)
+timezones.set("_out_us_edt", 3)
 timezones.set("_out_us_pdt", 0)
 timezones.set("_out_uk", 8)
-timezones.set("_out_nz", 19)
-timezones.set("_out_aus_east", 17)
+timezones.set("_out_nz", 20)
+timezones.set("_out_aus_east", 18)
 timezones.set("_out_aus_west", 15)
 timezones.set("_out_jp", 16)
 timezones.set("_out_ph", 15)
@@ -50,7 +38,7 @@ function generateTimes(){
 
 	setTargetDate()
 	setOutputFields()
-
+	setOutputTextArea()
 }
 
 function setTargetDate(){
@@ -105,6 +93,60 @@ function getTimeOffset(value){
 	
 
 	return '' + month + ' '+ newDate.getDate() +', ' + timeString; 
+}
+
+
+function setOutputTextArea(){
+
+	_output_txt_area = document.getElementById("_out_textarea")
+
+	_output_txt_area.value = ''
++'<table>'
++'\n  <tr>'
++'\n    <th width="50%" class="center">Region</th>'
++'\n    <th width="50%" class="center">Local Release Time</th>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">United States (EDT)</td>'
++'\n    <td class="center">'+ document.getElementById("_out_us_edt").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">United States (PDT)</td>'
++'\n    <td class="center">'+ document.getElementById("_out_us_pdt").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">United Kingdom</td>'
++'\n    <td class="center">'+ document.getElementById("_out_uk").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">New Zealand</td>'
++'\n    <td class="center">'+ document.getElementById("_out_nz").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">Australian East Coast</td>'
++'\n    <td class="center">'+ document.getElementById("_out_aus_east").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">Australian West Coast</td>'
++'\n    <td class="center">'+ document.getElementById("_out_aus_west").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">Japan</td>'
++'\n    <td class="center">'+ document.getElementById("_out_jp").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">Philippines</td>'
++'\n    <td class="center">'+ document.getElementById("_out_ph").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">South Africa</td>'
++'\n    <td class="center">'+ document.getElementById("_out_sa").value +'</td>'
++'\n  </tr>'
++'\n  <tr>'
++'\n    <td class="center">Brazil</td>'
++'\n    <td class="center">'+ document.getElementById("_out_br").value +'</td>'
++'\n  </tr>'
++'\n </table>'
 }
 
 function setDateToday(date, time){
