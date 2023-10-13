@@ -4,8 +4,7 @@ var inputRegion = document.getElementById("_input_region")
 var inputDate = document.getElementById("_input_date")
 var inputTime = document.getElementById("_input_time")
 
-var targetDate, latestDate
-
+var latestDate;
 
 const hourInMs = 3600000
 
@@ -30,7 +29,7 @@ function generateTimes(){
 
 function setTargetDate(){
 	//set targetDate from input fields date & time
-	targetDate = new Date(inputDate.value)
+	let targetDate = new Date(inputDate.value)
 	let[hours, mins] = inputTime.value.split(":")
 	targetDate.setHours(hours, mins)
 
@@ -43,7 +42,6 @@ function setOutputFields(){
 		//alert("timezone: " + key + " and " + value)
 		document.getElementById(key).value = getTimeOffset(value)
 	}
-
 }
 
 function getTimeOffset(value){
@@ -81,9 +79,7 @@ function getTimeOffset(value){
 
 function setOutputTextArea(){
 
-	_output_txt_area = document.getElementById("_out_textarea")
-
-	_output_txt_area.value = ''
+	document.getElementById("_out_textarea").value = ''
 +'<table>'
 +'\n  <tr>'
 +'\n    <th width="50%" class="center">Region</th>'
@@ -133,8 +129,6 @@ function setOutputTextArea(){
 }
 
 function prependZero(number){
-	if(number < 10)
-		return '0'+number
-	else
-		return number
+	return number < 10 ?  ('0'+number) : number
+
 }
