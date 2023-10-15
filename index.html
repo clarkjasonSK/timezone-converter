@@ -15,38 +15,62 @@
 			
 		</div>
 
-		<div class="breadcrumbs">
-			
-		</div>
+		
 
 		<div class="containerMain">
+			<div class="breadcrumbs">
+				<li><a href="https://game8.co/">Game8</a></li><li><a href="https://game8.co/articles">News</a></li><li><a href="https://clarkjasonsk.github.io/timezone-converter">News Editor Tools</a></li>
+				<span>Automatic timezone converter</span>
+			</div>
+
 			<div class ="contentLeft">
+				<img src="imgs/pc_icon.png">
 
 				<div class="contentTitle">
 					Automatic Timezone Converter
 				</div>
 				<div class="contentTimes">
-					published_at: 2023.10.13 01:27   updated_at: 2023.10.13 01:27
+					<img src="imgs/clock.png">
+					<div class ="time_published">
+						published_at: 2023.13.13 13:13   
+					</div>
+
+					<img src="imgs/clock.png" style="margin-left:6px;">
+					<div class ="time_updated">
+						updated_at: 2023.13.13 13:13
+					</div>
+					
 				</div>
 
-				<!--
+				
 				<div class="contentAuthor">
-					<a href="https://game8.co/articles/author/2498"> 
-						by Clark Jason Kong 
+					<a href="https://www.youtube.com/watch?v=gqRMo5fvL9k"> 
+						<div class="authorContainer">
+							<div id="_author_icon">
+								<img src="imgs/muscleman.png">
+							</div>
+
+							<div id="_author_name"> 
+								by my mom
+							</div> 
+						</div>
 					</a>
-				</div>-->
+				</div>
 
 				<div class="contentBody">
 					<p>
 						<img src="imgs/globe dots.png">
 					</p>
 					<p>
-						The following page lets you input a single time from a given region to automatically generate the corresponding times for other timezones. Continue on to start inserting inputs and getting outputs or whatever the fuck you want to do with your life.
+						The following page lets you enter a single time from a given region to automatically generate the corresponding times for other timezones. Continue on to start shoving in inputs and excreting out outputs.
 					</p>
 
 					<h2>
-						Enter Specific Time
+						Timezone Converter
 					</h2>
+					<h3>
+						Automatically Convert Through Entering Region, Date, and Time
+					</h3>
 					<div class="horizontalSection">
 
 						<div class="colContainer">
@@ -82,15 +106,16 @@
 
 					</div>
 					<p>
-						In the above fields, you must select a specific region, and its correspondig date and time. Press the "Generate" button below to automatically generate the dates and times for other regions.
+						In the above fields, you must select a specific region and a correspondig date and time. Press the ;quot& Generate ;quot& button below to automatically generate the dates and times for other regions. Press the ;quot& Clear ;quot& button to wipe every input and output.
 					</p>
 
 					<div class="horizontalSection">
-						<button onclick="generateTimes()">Generate</button>
-						<button onclick="clearAll()">Clear</button> 
+						<button id="_btn_generate" onclick="generateTimes()">Generate</button>
+						<button id="_btn_clear" onclick="clearAll()">Clear</button> 
 					</div>
 
-					<h2> Converted Timezones</h2>
+					<h2> Converted Times</h2>
+					<h3> The Generated Dates and Times For Reach Region</h3>
 					<table>
 					  <tr>
 					    <th>Region</th>
@@ -178,7 +203,7 @@
 
 					</table>	
 
-					<br>
+					<h3>Auto-Generated Code</h3>
 					<textarea id="_out_textarea" class="output clearable" readonly></textarea>
 
 				</div>

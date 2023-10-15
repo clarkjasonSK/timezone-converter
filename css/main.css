@@ -15,13 +15,6 @@ body{
 }
 
 /*
-body{
-    background: url('../imgs/globe dots.png') no-repeat;
-    background-size: 100vw 100vh;
-}*/
-
-
-/*
 #_overlay{
     position: absolute;
     width: 100vw; height: 100vh;
@@ -39,7 +32,7 @@ header{
 
     text-align: left;
     font-size: 26px;
-    padding-left: 10%;
+    padding-left: 21%;
 }
 
 .barCategories{
@@ -49,12 +42,39 @@ header{
 }
 
 .breadcrumbs{
-    width: 90%; height: 30px;
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    margin: 6px auto 6px auto;
-    text-align: left;
 
+    margin: 6px 0 10px 0;
+
+}
+
+li, span{
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0px 20px 0px 0px;
+    color: #90a4ae;
+    font-weight: bold;
+}
+li::after{
+    font-size: 10px;
+    content: "〉";
+    display: inline;
+    position: absolute;
+
+    color: #c6c6c6;
+
+    top: -1px;
+    right: 2px;
+}
+
+a{
+    color: #3381e8;
+    vertical-align: top;
+    text-decoration: none;
 }
 
 .containerMain{
@@ -93,21 +113,38 @@ header{
     display: flex;
 }
 
-/*
+
+
+
 .contentAuthor{
+    color: #3381e8;
+    text-decoration: none;
+
+    border-top: 1px solid #dbdfe7;
+    border-bottom: 1px solid #dbdfe7;
+
+}
+
+.authorContainer{
+    margin: 8px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+}
+
+#_author_icon{
+    width: 32px; height: 32px;
+}
+
+#_author_name{
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
     display: inline-block;
     color: #909cae;
+    margin-right: 12px;
+    text-align: center;
     padding-left: 8px;
-
-    border-top: 1px solid #dbdfe7;
-    border-bottom: 1px solid #dbdfe7;
-
-    margin: 8px 0px 8px 0px;
-}*/
-
+}
 
 .contentBody{
     display: block;
@@ -134,18 +171,27 @@ h2{
     border-bottom: 3px solid #ff8024;
 }
 
+h3{
+    font-size: 20px;
+    line-height: 26rpx;
+    margin: 20px 0 10px 0px;
+    padding: 10px 10px 8px 12px;
+    color: #343739;
+    font-weight: bold;
+    background-color: #f1f4f7;
+}
 
 .horizontalSection{
     display: flex;
     justify-content: center;
     flex-direction: row;
 
-    margin-bottom: 15px;
+    margin: 25px 0px 25px 0px;
 }
 
 
 .colContainer{
-    margin-right: 40px;
+    margin: 25px 40px 25px 0px;
 }
 
 .label{
@@ -176,7 +222,6 @@ button{
 
     background-color: #3381E8;
     color: #ffffff;
-    border-radius: 32px;
     border-style: none;
 
     padding: 8px 24px;
@@ -185,6 +230,16 @@ button{
 button:hover{
     background-color: #71A7EF;
     cursor: pointer;
+}
+
+#_btn_generate{
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+}
+
+#_btn_clear{
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 table{
