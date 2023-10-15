@@ -1,154 +1,220 @@
 <html>
 	<head>
 		<title>Timezone Conversion</title>
-		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	</head>
+
+	<!--<div id="_overlay"></div>-->
 
 	<body>
 		<header>
-				Automatic Timezone Converter
+			News Writer Tools
 		</header>
 
-		<div class="horizontalSection">
-			<div id="input_container">
-				<div class="input_line">
-					<div id=_col_region class="_col_container">
-						<div class="label">
-							Region
+		<div class="barCategories">
+			
+		</div>
+
+		
+
+		<div class="containerMain">
+			<div class="breadcrumbs">
+				<li><a href="https://game8.co/">Game8</a></li><li><a href="https://game8.co/articles">News</a></li><li><a href="https://clarkjasonsk.github.io/timezone-converter">News Editor Tools</a></li>
+				<span>Automatic timezone converter</span>
+			</div>
+
+			<div class ="contentLeft">
+				<img src="imgs/pc_icon.png">
+
+				<div class="contentTitle">
+					Automatic Timezone Converter
+				</div>
+				<div class="contentTimes">
+					<img src="imgs/clock.png">
+					<div class ="time_published">
+						published_at: 2023.13.13 13:13   
+					</div>
+
+					<img src="imgs/clock.png" style="margin-left:6px;">
+					<div class ="time_updated">
+						updated_at: 2023.13.13 13:13
+					</div>
+					
+				</div>
+
+				
+				<div class="contentAuthor">
+					<a href="https://www.youtube.com/watch?v=gqRMo5fvL9k"> 
+						<div class="authorContainer">
+							<div id="_author_icon">
+								<img src="imgs/muscleman.png">
+							</div>
+
+							<div id="_author_name"> 
+								by my mom
+							</div> 
+						</div>
+					</a>
+				</div>
+
+				<div class="contentBody">
+					<p>
+						<img src="imgs/globe dots.png">
+					</p>
+					<p>
+						The following page lets you enter a single time from a given region to automatically generate the corresponding times for other timezones. Continue on to start shoving in inputs and excreting out outputs.
+					</p>
+
+					<h2>
+						Timezone Converter
+					</h2>
+					<h3>
+						Automatically Convert Through Entering Region, Date, and Time
+					</h3>
+					<div class="horizontalSection">
+
+						<div class="colContainer">
+							<div class="label">
+								Region
+							</div>
+
+							<select id="_input_region" class="input clearable">
+								<option value="3">United States (EDT)</option>
+								<option value="0">United States (PDT)</option>
+								<option value="8">United Kingdom</option>
+								<option value="20">New Zealand</option>
+								<option value="18">Australian East Coast</option>
+								<option value="15">Australian West Coast</option>
+								<option value="16">Japan</option>
+								<option value="15">Philippines</option>
+								<option value="9">South Africa</option>
+								<option value="4">Brazil</option>
+							</select>
 						</div>
 
-						<select id="_input_region" class="input clearable">
-							<option value="3">United States (EDT)</option>
-							<option value="0">United States (PDT)</option>
-							<option value="8">United Kingdom</option>
-							<option value="20">New Zealand</option>
-							<option value="18">Australian East Coast</option>
-							<option value="15">Australian West Coast</option>
-							<option value="16">Japan</option>
-							<option value="15">Philippines</option>
-							<option value="9">South Africa</option>
-							<option value="4">Brazil</option>
-							
-						</select>
+						<div class="colContainer">
+							<div class="label"> Date </div>
+							<input id="_input_date" class="input clearable" type="date" />
+						</div>
+
+						
+						<div class="colContainer">
+							<div class="label"> Time </div>
+							<input id="_input_time" class="input clearable" type="time" />
+						</div>
+
 
 					</div>
+					<p>
+						In the above fields, you must select a specific region and a correspondig date and time. Press the ;quot& Generate ;quot& button below to automatically generate the dates and times for other regions. Press the ;quot& Clear ;quot& button to wipe every input and output.
+					</p>
 
-					<div id="_col_date" class="_col_container">
-						<div class="label"> Date </div>
-						<input id="_input_date" class="input clearable" type="date" />
+					<div class="horizontalSection">
+						<button id="_btn_generate" onclick="generateTimes()">Generate</button>
+						<button id="_btn_clear" onclick="clearAll()">Clear</button> 
 					</div>
 
-					
-					<div id="_col_time" class="_col_container">
-						<div class="label"> Time </div>
-						<input id="_input_time" class="input clearable" type="time" />
-					</div>
-				</div>
+					<h2> Converted Times</h2>
+					<h3> The Generated Dates and Times For Reach Region</h3>
+					<table>
+					  <tr>
+					    <th>Region</th>
+					    <th>Local Release Time</th>
+					  </tr>
 
-				<div class="input_line">
-					<button onclick="generateTimes()">Generate</button>
-					<button onclick="clearAll()">Clear</button> 
+					  <tr>
+					    <td>United States (EDT)</td>
+					    <td>
+					    <input id="_out_us_edt" class="output clearable
+					    " readonly/>
+					  </tr>
+
+					  <tr>
+					    <td>United States (PDT)</td>
+					    <td>
+					    <input id="_out_us_pdt" class="output clearable
+					    " readonly/>
+					  </tr>
+
+					  <tr>
+					    <td>United Kingdom</td>
+					    <td>
+					    	<input id="_out_uk" class="output clearable
+					    	" readonly/>
+						</td>
+
+					  </tr>
+
+					  <tr>
+					    <td>New Zealand</td>
+					    <td>
+					    	<input id="_out_nz" class="output clearable
+					    	" readonly/>
+						</td>
+					  </tr>
+
+					  <tr>
+					    <td>Australian East Coast</td>
+					    <td>
+					    	<input id="_out_aus_east" class="output clearable
+					    	" readonly/>
+						</td>
+					  </tr>
+
+					  <tr>
+					    <td>Australian West Coast</td>
+					    <td>
+					    	<input id="_out_aus_west" class="output clearable
+					    	" readonly/>
+						</td>
+					  </tr>
+
+					  <tr>
+					    <td>Japan</td>
+					    <td>
+					    	<input id="_out_jp" class="output clearable
+					    	" readonly/>
+						</td>
+					  </tr>
+
+					  <tr>
+					    <td>Philippines</td>
+					    <td>
+					    	<input id="_out_ph" class="output clearable
+					    	" readonly/>
+						</td>
+					  </tr>
+
+					  <tr>
+					    <td> South Africa</td>
+					    <td>
+					    	<input id="_out_sa" class="output clearable
+					    	" readonly>
+						</td>
+					  </tr>
+
+					  <tr>
+					    <td>Brazil</td>
+					    <td>
+					    	<input id="_out_br" class="output clearable
+					    	" readonly>
+						</td>
+					  </tr>
+
+					</table>	
+
+					<h3>Auto-Generated Code</h3>
+					<textarea id="_out_textarea" class="output clearable" readonly></textarea>
+
 				</div>
 			</div>
+
+
 		</div>
 
-		<div class="horizontalSection">
-			<div class="_col_container">
-				<table>
-				  <tr>
-				    <td class="label">Region</td>
-				    <td class="label">Local Release Time</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">United States (EDT)</td>
-				    <td>
-				    <input id="_out_us_edt" class="output clearable
-				    " readonly/>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">United States (PDT)</td>
-				    <td>
-				    <input id="_out_us_pdt" class="output clearable
-				    " readonly/>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">United Kingdom</td>
-				    <td>
-				    	<input id="_out_uk" class="output clearable
-				    	" readonly/>
-					</td>
-
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">New Zealand</td>
-				    <td>
-				    	<input id="_out_nz" class="output clearable
-				    	" readonly/>
-					</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">Australian East Coast</td>
-				    <td>
-				    	<input id="_out_aus_east" class="output clearable
-				    	" readonly/>
-					</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">Australian West Coast</td>
-				    <td>
-				    	<input id="_out_aus_west" class="output clearable
-				    	" readonly/>
-					</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">Japan</td>
-				    <td>
-				    	<input id="_out_jp" class="output clearable
-				    	" readonly/>
-					</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">Philippines</td>
-				    <td>
-				    	<input id="_out_ph" class="output clearable
-				    	" readonly/>
-					</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label"> South Africa</td>
-				    <td>
-				    	<input id="_out_sa" class="output clearable
-				    	" readonly>
-					</td>
-				  </tr>
-
-				  <tr>
-				    <td class="output_label">Brazil</td>
-				    <td>
-				    	<input id="_out_br" class="output clearable
-				    	" readonly>
-					</td>
-				  </tr>
-
-				</table>		
-			</div>
-
-			<div class="_col_container">
-				<textarea id="_out_textarea" class="output clearable" readonly>
-				</textarea>
-			</div>
-
-		</div>
+		
+		
 	</body>
-	<script type="text/javascript" src="clear.js"></script>
-	<script type="text/javascript" src="converter.js"></script>
+	<script type="text/javascript" src="scripts/clear.js"></script>
+	<script type="text/javascript" src="scripts/converter.js"></script>
 </html>
