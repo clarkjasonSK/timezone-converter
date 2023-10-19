@@ -125,7 +125,7 @@ function setOutputTextArea(){
 +'\n    <td class="center">Brazil</td>'
 +'\n    <td class="center">'+ document.getElementById("_out_br").value +'</td>'
 +'\n  </tr>'
-+'\n </table>'
++'\n</table>'
 }
 
 function prependZero(number){
