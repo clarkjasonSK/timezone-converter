@@ -34,6 +34,9 @@ header{
     font-size: 26px;
     padding-left: 21%;
 }
+#_site_logo{
+    width: 124px; height: 24px;
+}
 
 .barCategories{
     width: 100%; height: 45px;
@@ -109,11 +112,16 @@ a{
     font-size: 16px;
     line-height: 16px;
     color: #909cae;
-    padding: 8px 0px 16px 0px;
+    padding: 8.5px 0px 16px 0px;
     display: flex;
 }
 
 
+.clockIcon{
+    width: 13.65px; height: 13.66px;
+    padding-top:1px;
+    padding-right: 5px;
+}
 
 
 .contentAuthor{
@@ -126,7 +134,8 @@ a{
 }
 
 .authorContainer{
-    margin: 8px 0px 8px 0px;
+    height: 35px;
+    margin: 8px 0px 9px 0px;
     display: flex;
     align-items: center;
 }
@@ -159,7 +168,8 @@ p{
     word-break: normal;
 }
 img{
-    max-width: 100%;
+    max-width: 100%;max-height: 410px;
+    align-self: center;
 }
 
 h2{
@@ -181,39 +191,6 @@ h3{
     background-color: #f1f4f7;
 }
 
-.horizontalSection{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-
-    margin: 25px 0px 25px 0px;
-}
-
-
-.colContainer{
-    margin: 25px 40px 25px 0px;
-}
-
-.label{
-    font-size: 20px;
-    padding-bottom: 1vh;
-    text-align: center;
-}
-
-option{
-    background-color: #FFFFFF;
-}
-
-select:hover{
-    background-color: #FFFFFF;
-    border-style: solid;
-}
-
-.input {
-    font-size: 18px;
-    padding: 10px;
-}
-
 button{
     width: 45%;
     font-size: 18px;
@@ -225,21 +202,13 @@ button{
     border-style: none;
 
     padding: 8px 24px;
+
+    border-radius: 32px;
 }
 
 button:hover{
     background-color: #71A7EF;
     cursor: pointer;
-}
-
-#_btn_generate{
-    border-top-left-radius: 32px;
-    border-bottom-left-radius: 32px;
-}
-
-#_btn_clear{
-    border-top-right-radius: 32px;
-    border-bottom-right-radius: 32px;
 }
 
 table{
@@ -272,18 +241,4 @@ td{
     line-height: 25px;
     padding: 12px 8px 12px 8px;
     border: 1px #dbdfe7 solid;
-}
-
-.output{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 0 auto 0 auto;
-    text-align: center;
-}
-
-#_out_textarea{
-    width: 100%;
-    height: 500px;
-    resize: none;
-    text-align: left
 }

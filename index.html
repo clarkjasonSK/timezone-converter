@@ -2,13 +2,14 @@
 	<head>
 		<title>Timezone Conversion</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+
 	</head>
 
 	<!--<div id="_overlay"></div>-->
 
 	<body>
 		<header>
-			News Writer Tools
+			<img id="_site_logo" src="imgs/8bit_game8_logo.png">
 		</header>
 
 		<div class="barCategories">
@@ -19,25 +20,25 @@
 
 		<div class="containerMain">
 			<div class="breadcrumbs">
-				<li><a href="https://game8.co/">Game8</a></li><li><a href="https://game8.co/articles">News</a></li><li><a href="https://clarkjasonsk.github.io/timezone-converter">News Editor Tools</a></li>
-				<span>Automatic timezone converter</span>
+				<li><a href="https://game8.co/">Game8</a></li><li><a href="https://game8.co/articles">News</a></li><li><a href="https://clarkjasonsk.github.io/timezone-converter">Editor Tools</a></li>
+				<span>LOREMIPSUM</span>
 			</div>
 
 			<div class ="contentLeft">
 				<img src="imgs/pc_icon.png">
 
 				<div class="contentTitle">
-					Automatic Timezone Converter
+					LOREM IPSUM
 				</div>
 				<div class="contentTimes">
-					<img src="imgs/clock.png">
-					<div class ="time_published">
-						published_at: 2023.13.13 13:13   
+					<img class="clockIcon" src="imgs/clock.png">
+					<div>
+						published_at: 2023.10.11 12:13   
 					</div>
 
-					<img src="imgs/clock.png" style="margin-left:6px;">
-					<div class ="time_updated">
-						updated_at: 2023.13.13 13:13
+					<img class="clockIcon" src="imgs/clock.png" style="margin-left:10px;">
+					<div id ="_time_updated">
+						updated_at: 1313.13.13 13:13
 					</div>
 					
 				</div>
@@ -57,162 +58,7 @@
 					</a>
 				</div>
 
-				<div class="contentBody">
-					<p>
-						<img src="imgs/globe dots.png">
-					</p>
-					<p>
-						The following page lets you enter a single time from a given region to automatically generate the corresponding times for other timezones. Continue on to start shoving in inputs and excreting out outputs.
-					</p>
-
-					<h2>
-						Timezone Converter
-					</h2>
-					<h3>
-						Automatically Convert a Given Time
-					</h3>
-					<div class="horizontalSection">
-
-						<div class="colContainer">
-							<div class="label">
-								Region
-							</div>
-
-							<select id="_input_region" class="input clearable">
-								<option value="3">United States (EDT)</option>
-								<option value="0">United States (PDT)</option>
-								<option value="8">United Kingdom</option>
-								<option value="20">New Zealand</option>
-								<option value="18">Australian East Coast</option>
-								<option value="15">Australian West Coast</option>
-								<option value="16">Japan</option>
-								<option value="15">Philippines</option>
-								<option value="9">South Africa</option>
-								<option value="4">Brazil</option>
-							</select>
-						</div>
-
-						<div class="colContainer">
-							<div class="label"> Date </div>
-							<input id="_input_date" class="input clearable" type="date" />
-						</div>
-
-						
-						<div class="colContainer">
-							<div class="label"> Time </div>
-							<input id="_input_time" class="input clearable" type="time" />
-						</div>
-
-
-					</div>
-					<p>
-						In the above fields, select a specific region and a correspondig date and time. Press the ;quot& Generate ;quot& button below to automatically generate the dates and times for other regions. Press the ;quot& Clear ;quot& button to go scorched earth.
-					</p>
-
-					<div class="horizontalSection">
-						<button id="_btn_generate" onclick="generateTimes()">Generate</button>
-						<button id="_btn_clear" onclick="clearAll()">Clear</button> 
-					</div>
-
-					<h2> Converted Times</h2>
-					<h3> The Generated Dates and Times For Reach Region</h3>
-					<table>
-					  <tr>
-					    <th>Region</th>
-					    <th>Local Release Time</th>
-					  </tr>
-
-					  <tr>
-					    <td>United States (EDT)</td>
-					    <td>
-					    <input id="_out_us_edt" class="output clearable
-					    " readonly/>
-					  </tr>
-
-					  <tr>
-					    <td>United States (PDT)</td>
-					    <td>
-					    <input id="_out_us_pdt" class="output clearable
-					    " readonly/>
-					  </tr>
-
-					  <tr>
-					    <td>United Kingdom</td>
-					    <td>
-					    	<input id="_out_uk" class="output clearable
-					    	" readonly/>
-						</td>
-
-					  </tr>
-
-					  <tr>
-					    <td>New Zealand</td>
-					    <td>
-					    	<input id="_out_nz" class="output clearable
-					    	" readonly/>
-						</td>
-					  </tr>
-
-					  <tr>
-					    <td>Australian East Coast</td>
-					    <td>
-					    	<input id="_out_aus_east" class="output clearable
-					    	" readonly/>
-						</td>
-					  </tr>
-
-					  <tr>
-					    <td>Australian West Coast</td>
-					    <td>
-					    	<input id="_out_aus_west" class="output clearable
-					    	" readonly/>
-						</td>
-					  </tr>
-
-					  <tr>
-					    <td>Japan</td>
-					    <td>
-					    	<input id="_out_jp" class="output clearable
-					    	" readonly/>
-						</td>
-					  </tr>
-
-					  <tr>
-					    <td>Philippines</td>
-					    <td>
-					    	<input id="_out_ph" class="output clearable
-					    	" readonly/>
-						</td>
-					  </tr>
-
-					  <tr>
-					    <td> South Africa</td>
-					    <td>
-					    	<input id="_out_sa" class="output clearable
-					    	" readonly>
-						</td>
-					  </tr>
-
-					  <tr>
-					    <td>Brazil</td>
-					    <td>
-					    	<input id="_out_br" class="output clearable
-					    	" readonly>
-						</td>
-					  </tr>
-
-					</table>
-					<p>
-						The above are the calculated times for each region converted from the time you have given. Make sure you entered the correct time. Currently, Daylight saving time is still not implemented, so lmao goodluck.
-					</p>
-
-					<h3>Auto-Generated Code</h3>
-					<textarea id="_out_textarea" class="output clearable" readonly></textarea>
-					<p>
-						The automatically-generated code above can be copy-pasted from this page directly onto the NE. Or not. Up to you really. Not telling you what to do or anything. Just, giving you more options. Feel free to do so or ignore, no pressure. 
-					</p>
-
-				</div>
+				
 			</div>
 
 
@@ -221,6 +67,6 @@
 		
 		
 	</body>
-	<script type="text/javascript" src="scripts/clear.js"></script>
-	<script type="text/javascript" src="scripts/converter.js"></script>
+	<script type="text/javascript" src="scripts/tools.js"></script>
+
 </html>

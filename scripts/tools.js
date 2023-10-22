@@ -10,3 +10,7 @@ function clearAll(){
 	}
 
 }
+
+function prependZero(number){
+	return number < 10 ?  ('0'+number) : number
+}

@@ -128,7 +128,3 @@ function setOutputTextArea(){
 +'\n</table>'
 }
 
-function prependZero(number){
-	return number < 10 ?  ('0'+number) : number
-
-}
