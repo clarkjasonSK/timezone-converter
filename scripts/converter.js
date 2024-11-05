@@ -9,9 +9,9 @@ var latestDate;
 const hourInMs = 3600000
 
 const timezones = new Map()
-timezones.set("_out_us_edt", 3)
-timezones.set("_out_us_pdt", 0)
-timezones.set("_out_uk", 8)
+timezones.set("_out_us_edt", 2)
+timezones.set("_out_us_pdt", -1)
+timezones.set("_out_uk", 7)
 timezones.set("_out_nz", 20)
 timezones.set("_out_aus_east", 18)
 timezones.set("_out_aus_west", 15)
